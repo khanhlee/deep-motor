@@ -75,7 +75,7 @@ def cnn_model():
     return model
 
 
-# define 10-fold cross validation test harness
+# define 5-fold cross validation test harness
 kfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=seed)
 cvscores = []
 for train, test in kfold.split(X, Y):
